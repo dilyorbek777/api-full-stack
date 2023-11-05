@@ -29,7 +29,7 @@ class UserCreate(UserBase):
 class User(UserBase, Item):
     id: int
     is_active: bool
-    items: list[Item] = []
+    items: list[Item:"idb-item"] = []
 
     class Config:
         orm_mode = True
